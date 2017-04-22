@@ -1,0 +1,321 @@
+{% extends 'main/base.html' %}
+
+{% load staticfiles %}
+
+
+{% block content %}
+    <div class="bg1">
+        <div class="grid content1">
+            <header class="group">
+                <a href="#" class="logo"><img src="{% static 'images/logo.png' %}" alt="image"></a>
+
+                <ul class="menu">
+                    <li>
+                        <a href="#">Artworks</a>
+                        <ul class="submenu">
+                            <li><a href="">New</a></li>
+                            <li><a href="">Auction</a></li>
+                            <li><a href="">Buy and Sell</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Help</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Artists</a>
+                        <ul class="submenu">
+                            <li><a href="">New</a></li>
+                            <li><a href="">Auction</a></li>
+                            <li><a href="">Buy and Sell</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Help</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Discover</a>
+                        <ul class="submenu">
+                            <li><a href="">New</a></li>
+                            <li><a href="">Auction</a></li>
+                            <li><a href="">Buy and Sell</a></li>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">Help</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form method="post" action="#" class="form">
+                    <label>
+                        <input type="search" placeholder="Search">
+                    </label>
+
+                    <label for="select">
+                        <select id="select">
+                            <option value="1" selected disabled>Category</option>
+                            <option value="2">Portrait</option>
+                            <option value="2">Scenery</option>
+                            <option value="2">Abstract</option>
+                            <option value="2">Naturmorts</option>
+                            <option value="2">Animals</option>
+                            <option value="2">Modern</option>
+                            <option value="2">Photography</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        <input type="number" placeholder="Price">
+                    </label>
+
+                    <label>
+                        <input type="submit" value="">
+                    </label>
+                </form>
+
+                <ul class="register">
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Log in</a></li>
+                </ul>
+            </header>
+
+            <div class="container1">
+                <h1>Buy and Sell your artwoks</h1>
+                <button type="button">join us</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg2">
+        <div class="content2 grid">
+            <h2><span>Shop by</span> COLLECTION</h2>
+
+            <div class="collections">
+                {% for item in arts %}
+
+                    <a href="#" class="collection">
+                        <img src="{{ item.images.url }}" alt="image">
+
+                        <div class="hover_effect"></div>
+                        <div class="c_hover"><p>{{ item.type_of_art }}</p></div>
+                    </a>
+                {% endfor %}
+
+            </div>
+            <h2><span>Shop by</span> CATEGORIES</h2>
+
+            <div class="categories">
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat1.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>MODERN</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat_abs.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>ABSTRACT</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat_scenary.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>SCENARY</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat_photo.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>PHOTOGRAPHY</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/c2.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>PORTRAIT</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat_bird.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>ANIMALS</h2>
+                </a>
+
+                <a href="#" class="category">
+                    <div class="c_img">
+                        <img src="{% static 'images/cat_nat.jpg' %}" alt="image">
+                    </div>
+
+                    <h2>NATURMORTS</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg3">
+        <div class="content3 grid group">
+            <div class="container2">
+                <h3>Get expert art advice</h3>
+
+                <p>Talk to one of our curators<br>
+                    and get advice chosing artwork<br>
+                    for you, for free </p>
+
+                <button type="button">discover more</button>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bg4">
+        <div class="content4 grid">
+            <h2><span>Recently</span> SOLD</h2>
+
+            <div class="sold">
+                <a href="#" class="exp">
+                    <div class="e_img">
+                        <img src="{% static 'images/exp.jpg' %}" alt="image">
+
+                        <div class="element">SOLD</div>
+                    </div>
+
+                    <div class="e_desc">
+                        <p>Abstract #3</p>
+
+                        <p>Zhanyl Turtemirova</p>
+
+                        <p>250$</p>
+                    </div>
+
+                </a>
+
+                <a href="#" class="exp">
+                    <div class="e_img">
+                        <img src="{% static 'images/exp.jpg' %}" alt="image">
+
+                        <div class="element">SOLD</div>
+                    </div>
+
+                    <div class="e_desc">
+                        <p>Abstract #3</p>
+
+                        <p>Zhanyl Turtemirova</p>
+
+                        <p>250$</p>
+                    </div>
+
+                </a>
+
+                <a href="#" class="exp">
+                    <div class="e_img">
+                        <img src="{% static 'images/exp.jpg' %}" alt="image">
+
+                        <div class="element">SOLD</div>
+                    </div>
+
+                    <div class="e_desc">
+                        <p>Abstract #3</p>
+
+                        <p>Zhanyl Turtemirova</p>
+
+                        <p>250$</p>
+                    </div>
+
+                </a>
+
+                <a href="#" class="exp">
+                    <div class="e_img">
+                        <img src="{% static 'images/exp.jpg' %}" alt="image">
+
+                        <div class="element">SOLD</div>
+                    </div>
+
+                    <div class="e_desc">
+                        <p>Abstract #3</p>
+
+                        <p>Zhanyl Turtemirova</p>
+
+                        <p>250$</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+            <button type="button">view all</button>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer grid">
+            <div class="footer_menu">
+                <ul class="f_menu">
+                    <li><a href="#">For buyers</a></li>
+                    <li><a href="#">Art advisor</a></li>
+                    <li><a href="#">Buyer FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Catalog</a></li>
+                </ul>
+
+                <ul class="f_menu">
+                    <li><a href="#">For artists</a></li>
+                    <li><a href="#">Sell your art</a></li>
+                    <li><a href="#">seller’s guide</a></li>
+                    <li><a href="#">Artist FAQ</a></li>
+                </ul>
+
+                <ul class="f_menu">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+
+                <ul class="f_menu">
+                    <li><a href="#">Sequrity</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Copyright Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="f_float group">
+
+                <ul class="share">
+                    <li class="fb"><a class="social " href="#"></a></li>
+                    <li class="instagram"><a class="social " href="#"></a></li>
+                    <li class="pinterest"><a class="social " href="#"></a></li>
+                </ul>
+
+                <form method="post" action="#" class="f_form">
+                    <div class="f_desc">
+                        <p>Sign up for our news</p>
+                        <span>Discover new art with us</span>
+                    </div>
+
+                    <label>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+
+                    <label>
+                        <input type="submit" value="sign up">
+                    </label>
+                </form>
+            </div>
+
+            <div class="f_logo">
+                <img src="{% static 'images/footer_logo.png' %}" alt="image">
+            </div>
+
+
+        </div>
+    </footer>
+{% endblock %}
